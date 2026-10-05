@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortalTheVideoGames</title>
+    <link rel="stylesheet" href="colores.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"> Portal<span>TheVideoGames</span></div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nuevos">Nuevos</a>
+            <a href="#populares">Populares</a>
+            <a href="#proximos">Próximamente</a>
+            <a href="#nosotros">Sobre nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button class="carrito-btn" onclick="mostrarCarrito()">
+              Carrito <span id="cantidadCarrito">0</span>
+        </button>
+    </header>
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-text">
+            <p class="etiqueta"> PORTAL GAMER</p>
+
+            <h1>
+                El lugar donde<br>
+                comienzan tus<br>
+                <span>aventuras.</span>
+            </h1>
+
+            <p>
+                Descubre videojuegos nuevos, populares y próximos
+                lanzamientos. Compra tus favoritos o reserva los
+                juegos que estás esperando.
+            </p>
+
+            <a href="#juegos" class="boton">Explorar juegos</a>
+        </div>
+
+        <div class="hero-card">
+            <div class="control"></div>
+            <h2>PortalTheVideoGames</h2>
+            <p>Compra • Descubre • Reserva</p>
+        </div>
+
+    </section>
+
+    <section class="buscador-section">
+
+        <h2> Busca tu próximo juego</h2>
+
+        <input
+            type="text"
+            id="buscador"
+            placeholder="Escribe el nombre de un videojuego..."
+            onkeyup="buscarJuego()"
+        >
+
+    </section>
+
+    <main id="juegos">
+
+        <section id="nuevos" class="seccion">
+
+            <div class="titulo-seccion">
+                <div>
+                    <p>LANZAMIENTOS</p>
+                    <h2> Juegos nuevos</h2>
+                </div>
+            </div>
+
+            <div class="juegos-grid">
+
+                <article class="juego" data-nombre="Cyberpunk 2077">
+                    <div class="imagen-juego cyberpunk"></div>
+                    <div class="info-juego">
+                        <span class="categoria">RPG</span>
+                        <h3>Cyberpunk 2077</h3>
+                        <p>Una aventura futurista llena de acción.</p>
+                        <strong>$149.900 COP</strong>
+                        <button onclick="agregarCarrito('Cyberpunk 2077', 149900)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+
+                <article class="juego" data-nombre="Spider-Man">
+                    <div class="imagen-juego spiderman"></div>
+                    <div class="info-juego">
+                        <span class="categoria">Acción</span>
+                        <h3>Spider-Man</h3>
+                        <p>Recorre la ciudad y conviértete en héroe.</p>
+                        <strong>$179.900 COP</strong>
+                        <button onclick="agregarCarrito('Spider-Man', 179900)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="juego" data-nombre="EA Sports FC">
+                    <div class="imagen-juego futbol"></div>
+                    <div class="info-juego">
+                        <span class="categoria">Deportes</span>
+                        <h3>EA Sports FC</h3>
+                        <p>Vive la emoción del fútbol.</p>
+                        <strong>$159.900 COP</strong>
+                        <button onclick="agregarCarrito('EA Sports FC', 159900)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="populares" class="seccion">
+
+            <div class="titulo-seccion">
+                <div>
+                    <p>LOS FAVORITOS</p>
+                    <h2> Juegos populares</h2>
+                </div>
+            </div>
+
+            <div class="juegos-grid">
+
+                <article class="juego" data-nombre="Minecraft">
+                    <div class="imagen-juego minecraft"></div>
+                    <div class="info-juego">
+                        <span class="categoria">Aventura</span>
+                        <h3>Minecraft</h3>
+                        <p>Construye, explora y crea tu propio mundo.</p>
+                        <strong>$99.900 COP</strong>
+                        <button onclick="agregarCarrito('Minecraft', 99900)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+                <article class="juego" data-nombre="Grand Theft Auto V">
+                    <div class="imagen-juego gta"></div>
+                    <div class="info-juego">
+                        <span class="categoria">Acción</span>
+                        <h3>Grand Theft Auto V</h3>
+                        <p>Explora Los Santos y vive una gran aventura.</p>
+                        <strong>$89.900 COP</strong>
+                        <button onclick="agregarCarrito('Grand Theft Auto V', 89900)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+
+                <article class="juego" data-nombre="Fortnite">
+                    <div class="imagen-juego fortnite"></div>
+                    <div class="info-juego">
+                        <span class="categoria">Battle Royale</span>
+                        <h3>Fortnite</h3>
+                        <p>Compite y demuestra tus habilidades.</p>
+                        <strong>$79.900 COP</strong>
+                        <button onclick="agregarCarrito('Fortnite', 79900)">
+                            Agregar al carrito
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="proximos" class="seccion proximos">
+
+            <div class="titulo-seccion">
+                <div>
+                    <p>MUY PRONTO</p>
+                    <h2> Próximos lanzamientos</h2>
+                </div>
+            </div>
+
+            <div class="juegos-grid">
+
+                <article class="juego" data-nombre="Grand Theft Auto VI">
+                    <div class="imagen-juego gta6"></div>
+
+                    <div class="info-juego">
+                        <span class="categoria">Próximamente</span>
+                        <h3>Grand Theft Auto VI</h3>
+                        <p>Uno de los lanzamientos más esperados.</p>
+
+                        <strong>Reserva desde $199.900 COP</strong>
+
+                        <button onclick="reservarJuego('Grand Theft Auto VI')">
+                             Reservar juego
+                        </button>
+                    </div>
+                </article>
+
+
+                <article class="juego" data-nombre="The Elder Scrolls">
+                    <div class="imagen-juego elder"></div>
+
+                    <div class="info-juego">
+                        <span class="categoria">Próximamente</span>
+                        <h3>The Elder Scrolls</h3>
+                        <p>Prepárate para una nueva aventura fantástica.</p>
+
+                        <strong>Reserva desde $189.900 COP</strong>
+
+                        <button onclick="reservarJuego('The Elder Scrolls')">
+                             Reservar juego
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <section id="nosotros" class="nosotros">
+
+        <div class="nosotros-contenido">
+
+            <div>
+                <p class="etiqueta">SOBRE NOSOTROS</p>
+
+                <h2>¿Qué es PortalTheVideoGames?</h2>
+
+                <p>
+                    PortalTheVideoGames es una tienda virtual creada para
+                    los amantes de los videojuegos. Nuestro objetivo es
+                    ofrecer un espacio donde los usuarios puedan descubrir
+                    videojuegos nuevos, encontrar títulos populares y
+                    conocer los próximos lanzamientos.
+                </p>
+
+                <p>
+                    También ofrecemos la posibilidad de reservar algunos
+                    videojuegos antes de su lanzamiento para que los
+                    jugadores puedan estar preparados para disfrutar de
+                    sus títulos favoritos.
+                </p>
+
+            </div>
+
+            <div class="nosotros-icon">
+                
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contacto" class="contacto">
+
+        <p class="etiqueta">ESTAMOS PARA AYUDARTE</p>
+
+        <h2> Contáctanos</h2>
+
+        <p>
+            ¿Tienes alguna pregunta sobre un videojuego, una compra
+            o una reserva? Comunícate con nosotros.
+        </p>
+
+        <div class="contacto-grid">
+
+            <div class="contacto-card">
+                
+                <h3>Teléfono</h3>
+                <p>+57 3118859086</p>
+            </div>
+
+            <div class="contacto-card">
+                
+                <h3>Correo</h3>
+                <p>leguizamonjuandavid63@gmail.com</p>
+            </div>
+
+            <div class="contacto-card">
+                
+                <h3>Instagram</h3>
+                <p>@PortalTheVideoGames</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="logo">Portal<span>TheVideoGames</span></div>
+
+        <p>
+             2026 PortalTheVideoGames.
+            Todos los derechos reservados.
+        </p>
+
+        <p>
+            Compra • Descubre • Reserva
+        </p>
+
+    </footer>
+
+    <div id="carritoModal" class="modal">
+
+        <div class="carrito-contenido">
+
+            <button class="cerrar" onclick="cerrarCarrito()">✕</button>
+
+            <h2> Tu carrito</h2>
+
+            <div id="listaCarrito"></div>
+
+            <div class="total">
+                <h3>Total:</h3>
+                <h3 id="totalCarrito">$0 COP</h3>
+            </div>
+
+            <button class="comprar" onclick="finalizarCompra()">
+                 Finalizar compra
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="acceso.js"></script>
+
+</body>
+</html>
