@@ -189,6 +189,11 @@ nav a:hover {
     justify-content: center;
     font-size: 85px;
 }
+.imagen-juego img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .cyberpunk {
     background: linear-gradient(135deg, #211047, #4a165a);
 }
@@ -280,6 +285,13 @@ nav a:hover {
 .nosotros-icon {
     font-size: 170px;
     text-align: center;
+}
+.nosotros-icon img {
+    width: 100%;
+    max-width: 320px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 .contacto {
     padding: 90px 8%;
